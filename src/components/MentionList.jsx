@@ -1,7 +1,8 @@
 import React, {
-  forwardRef, useEffect, useImperativeHandle,
+  forwardRef, useContext, useEffect, useImperativeHandle,
   useState,
 } from 'react'
+import { VarContext } from '../contexts/VarContextProvider';
 
 const VARIABLES = [
   { id: "user_name", label: "User Name", value: "{{user_name}}" },
@@ -15,7 +16,8 @@ const VARIABLES = [
 ];
 
 export default forwardRef((props, ref) => {
-  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const { setValue } = useContext(VarContext);
 
   const selectItem = index => {
     const label = props.items[index]; 
@@ -24,6 +26,7 @@ export default forwardRef((props, ref) => {
 
     if (selectedVariable) {
       props.command({ id: `${selectedVariable.id}}}`}); 
+      setValue(selectedVariable.id)
     }
   }
 

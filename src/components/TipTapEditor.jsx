@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import TextStyle from "@tiptap/extension-text-style";
@@ -19,6 +19,7 @@ import UnorderedListBtn from "./UnorderedListBtn";
 import OrderedListBtn from "./OrderedListBtn";
 import suggestion from "./suggestion";
 import Mention from "@tiptap/extension-mention";
+import { VarContext } from "../contexts/VarContextProvider";
 
 const extensions = [
   StarterKit,
@@ -41,14 +42,28 @@ const extensions = [
 const content = ``;
 
 const TipTap = () => {
+  const [editorContent, setEditorContent] = useState(null);
+  const { value } = useContext(VarContext);
   const editor = useEditor({
     extensions,
     content,
+    onUpdate: ({ editor }) => {
+      setEditorContent(editor.getText()); 
+    },
+    
   });
 
   if (!editor) {
     return null;
   }
+
+  useEffect(() => {
+    console.log(editorContent)
+  }, [editorContent])
+
+  useEffect(() => {
+    console.log(value, 'value')
+  }, [value])
 
   return (
     <div>
