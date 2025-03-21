@@ -76,3 +76,24 @@
   overflow: auto;
   width: 60%;
 }
+
+.tiptap .mention {
+  background-color: rgb(197, 197, 197);
+  border-radius: 0.4rem;
+  padding: 0.1rem 0.3rem;
+}
+
+.dropdown-menu {
+  background: var(--white);
+  border: 1px solid var(--gray-1);
+  border-radius: 0.7rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  overflow: auto;
+  padding: 0.4rem;
+  position: relative;
+}
+
+

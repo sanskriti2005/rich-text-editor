@@ -1,21 +1,24 @@
 import React from "react";
 import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
+import TextStyle from "@tiptap/extension-text-style";
+import FontFamily from "@tiptap/extension-font-family";
+import Underline from "@tiptap/extension-underline";
+import Highlight from "@tiptap/extension-highlight";
+import TextAlign from "@tiptap/extension-text-align";
+
 import BoldBtn from "./BoldBtn";
 import HeadingDropdown from "./HeadingDropdown";
 import ItalicBtn from "./ItalicBtn";
 import StrikeThroughBtn from "./StrikeThroughBtn";
-import TextStyle from "@tiptap/extension-text-style";
-import FontFamily from "@tiptap/extension-font-family";
 import FontDropdown from "./FontDropdown";
-import Underline from "@tiptap/extension-underline";
 import UnderlineBtn from "./UnderlineBtn";
 import HiglightBtn from "./HiglightBtn";
-import Highlight from "@tiptap/extension-highlight";
-import TextAlign from "@tiptap/extension-text-align";
 import TextAlignDropdown from "./TextAlignDropdown";
 import UnorderedListBtn from "./UnorderedListBtn";
 import OrderedListBtn from "./OrderedListBtn";
+import suggestion from "./suggestion";
+import Mention from "@tiptap/extension-mention";
 
 const extensions = [
   StarterKit,
@@ -27,6 +30,12 @@ const extensions = [
     types: ["heading", "paragraph"],
     alignments: ["left", "center", "right"],
   }),
+  Mention.configure({
+    HTMLAttributes: {
+      class: 'mention',
+    },
+    suggestion,
+  }),
 ];
 
 const content = ``;
@@ -36,9 +45,11 @@ const TipTap = () => {
     extensions,
     content,
   });
+
   if (!editor) {
     return null;
   }
+
   return (
     <div>
       <div className="flex w-[60%] justify-evenly p-6 m-[auto] h-[80px] align-center">
@@ -64,13 +75,13 @@ const TipTap = () => {
         <HiglightBtn editor={editor} />
 
         {/* Text-align Dropdown */}
-        <TextAlignDropdown editor={editor}/>
+        <TextAlignDropdown editor={editor} />
 
         {/* Unordered list Btn */}
-        <UnorderedListBtn editor={editor}/>
+        <UnorderedListBtn editor={editor} />
 
         {/* Ordered List Btn */}
-        <OrderedListBtn editor={editor}/>
+        <OrderedListBtn editor={editor} />
       </div>
       <div>
         <EditorContent editor={editor} />

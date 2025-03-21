@@ -13,17 +13,21 @@
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.0.15",
+    "@talqui-oss/tiptap-extension-variable": "^0.0.4",
     "@tiptap/extension-font-family": "^2.11.5",
     "@tiptap/extension-highlight": "^2.11.5",
+    "@tiptap/extension-mention": "^2.11.5",
     "@tiptap/extension-text-align": "^2.11.5",
     "@tiptap/extension-text-style": "^2.11.5",
     "@tiptap/extension-underline": "^2.11.5",
     "@tiptap/pm": "^2.11.5",
     "@tiptap/react": "^2.11.5",
     "@tiptap/starter-kit": "^2.11.5",
+    "@tiptap/suggestion": "^2.11.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "tailwindcss": "^4.0.15"
+    "tailwindcss": "^4.0.15",
+    "tippy.js": "^6.3.7"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
@@ -35,6 +39,7 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
+    "sass-embedded": "^1.86.0",
     "vite": "^6.2.0"
   }
 }
