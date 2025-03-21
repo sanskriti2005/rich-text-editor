@@ -78,9 +78,14 @@
 }
 
 .tiptap .mention {
-  background-color: rgb(197, 197, 197);
+  background-color: rgb(205, 201, 201);
   border-radius: 0.4rem;
   padding: 0.1rem 0.3rem;
+  border: 1px solid rgb(103, 103, 103);
+}
+
+.input-field{
+  border: 1px solid gray;
 }
 
 .dropdown-menu {
