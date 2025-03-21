@@ -29,8 +29,8 @@ const FontDropdown = ({ editor }) => {
 
   return (
     <Listbox value={selected} onChange={applyFont}>
-      <div className="relative w-48">
-        <ListboxButton className="border rounded-md p-2 flex justify-between w-full items-center z-50">
+      <div className="relative w-30">
+        <ListboxButton className="border rounded-md p-1 flex justify-between w-full items-center z-50">
           {selected.label}
           <ChevronUpDownIcon className="w-5 h-5 ml-2 text-gray-500" />
         </ListboxButton>

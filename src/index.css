@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+/* Note (mostly to self): Tailwind removes heading as well as list styling, so the basic styling for them need to be configured again */
+
 @layer base {
   h1 {
     font-size: var(--text-2xl);
@@ -26,8 +28,43 @@
     color: var(--color-blue-600);
     text-decoration-line: underline;
   }
+
+  /* List styling */
+  /* Unordered List (ul) */
+  ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+
+  ul ul {
+    list-style-type: circle;
+    padding-left: 1.25rem;
+  }
+
+  ul ul ul {
+    list-style-type: square;
+    padding-left: 1rem;
+  }
+
+  /* Ordered List (ol) */
+  ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+  }
+
+  ol ol {
+    list-style-type: lower-alpha;
+    padding-left: 1.25rem;
+  }
+
+  ol ol ol {
+    list-style-type: lower-roman;
+    padding-left: 1rem;
+  }
 }
 
+
+/* Styling to the editor */
 .tiptap {
   border: 0.2px solid #ccc;
   border-radius: 8px;
@@ -36,6 +73,6 @@
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
-  overflow: auto; 
+  overflow: auto;
   width: 60%;
 }

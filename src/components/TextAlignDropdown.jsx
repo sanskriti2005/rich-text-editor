@@ -73,9 +73,7 @@ const TextAlignDropdown = ({editor}) => {
   const applyFormat = (option) => {
     setSelected(option);
     if (option.value) {
-      editor.chain().focus().setTextAlign(option.value).run();
-    } else {
-      editor.chain().focus().unsetTextAlign().run();
+      editor.chain().focus().setTextAlign(option.value || 'left').run();
     }
   };
   return (
