@@ -32,7 +32,7 @@ const extensions = [
   }),
   Mention.configure({
     HTMLAttributes: {
-      class: 'mention',
+      class: "mention",
     },
     suggestion,
   }),
@@ -52,7 +52,7 @@ const TipTap = () => {
 
   return (
     <div>
-      <div className="flex w-[60%] justify-evenly p-6 m-[auto] h-[80px] align-center">
+      <div className="flex flex-wrap w-full max-w-[90%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%] justify-center gap-2 p-4 mx-auto h-auto items-center">
         {/* Heading Dropdown */}
         <HeadingDropdown editor={editor} />
 
