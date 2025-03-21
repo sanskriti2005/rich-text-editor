@@ -15,7 +15,14 @@ import Highlight from "@tiptap/extension-highlight";
 import TextAlign from "@tiptap/extension-text-align";
 import TextAlignDropdown from "./TextAlignDropdown";
 
-const extensions = [StarterKit, TextStyle, FontFamily, Underline, Highlight, TextAlign];
+const extensions = [
+  StarterKit,
+  TextStyle,
+  FontFamily,
+  Underline,
+  Highlight,
+  TextAlign,
+];
 
 const content = ``;
 
@@ -29,7 +36,7 @@ const TipTap = () => {
   }
   return (
     <div>
-      <div className="flex w-[100%] justify-evenly p-4">
+      <div className="flex w-[60%] justify-evenly p-6 m-[auto]">
         {/* Heading Dropdown */}
         <HeadingDropdown editor={editor} />
 
@@ -52,7 +59,7 @@ const TipTap = () => {
         <HiglightBtn editor={editor} />
 
         {/* Text-align Dropdown */}
-        <TextAlignDropdown/>
+        <TextAlignDropdown />
       </div>
       <div>
         <EditorContent editor={editor} />

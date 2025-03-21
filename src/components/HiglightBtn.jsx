@@ -11,7 +11,7 @@ const HiglightBtn = ({ editor }) => {
             : "border-black-400 text-black"
         }`}
       >
-        <span className="bg-black text-white px-2 py-1 rounded-md">A</span>
+        <span className="bg-black text-white px-2 py-1 rounded-2xl">A</span>
       </button>
     </div>
   );

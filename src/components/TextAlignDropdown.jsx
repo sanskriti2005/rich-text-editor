@@ -85,7 +85,7 @@ const TextAlignDropdown = ({editor}) => {
           {selected.label}
           <ChevronUpDownIcon className="w-5 h-5 ml-2" />
         </ListboxButton>
-        <ListboxOptions className="absolute bg-white shadow-md rounded-md mt-1">
+        <ListboxOptions className="absolute bg-white shadow-md rounded-md mt-1 z-50">
           {alignmentOptions.map((option) => (
             <ListboxOption
               key={option.value}
