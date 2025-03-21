@@ -7,6 +7,8 @@ import Paragraph from "@tiptap/extension-paragraph";
 import Text from "@tiptap/extension-text";
 import BoldBtn from "./BoldBtn";
 import HeadingDropdown from "./HeadingDropdown";
+import ItalicBtn from "./ItalicBtn";
+import StrikeThroughBtn from "./StrikeThroughBtn";
 
 const extensions = [StarterKit];
 
@@ -25,24 +27,17 @@ const TipTap = () => {
       <div className="flex w-[100%] justify-evenly p-4">
         {/* Heading Dropdown */}
         <HeadingDropdown editor={editor}/>
-        
+
         {/* Bold */}
         <BoldBtn editor={editor}/>
+
+
         {/* Italic */}
-        <button
-          onClick={() => editor.chain().focus().toggleItalic().run()}
-          className={editor.isActive("italic") ? "is-active" : ""}
-        >
-          Italic
-        </button>
+        <ItalicBtn editor={editor}/>
+
+
         {/* Strike */}
-        <button
-          onClick={() => editor.chain().focus().toggleStrike().run()}
-          disabled={!editor.can().chain().focus().toggleStrike().run()}
-          className={editor.isActive("strike") ? "is-active" : ""}
-        >
-          Strike
-        </button>
+        <StrikeThroughBtn editor={editor}/>
 
         {/* Code */}
         <button

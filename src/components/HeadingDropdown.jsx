@@ -5,7 +5,6 @@ import {
   ListboxOptions,
   ListboxOption,
 } from "@headlessui/react";
-
 import { ChevronUpDownIcon } from "@heroicons/react/20/solid";
 
 const headingOptions = [
