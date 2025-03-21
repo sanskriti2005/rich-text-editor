@@ -18,7 +18,6 @@ const HeadingDropdown = ({ editor }) => {
 
   const applyFormat = (option) => {
     setSelected(option);
-    if (!editor) return;
     if (option.value === "paragraph") {
       editor.chain().focus().setParagraph().run();
     } else {
